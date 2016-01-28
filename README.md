@@ -21,7 +21,7 @@ In addition to usual Enzyme methods there are few new which lets you search for 
 * `mix`
 * `tag`
 
-### findBEM(bem)
+### `findBEM(bem)`
 
 ```js
 import { BEM } from 'rebem';
@@ -47,7 +47,7 @@ const shallowWrapper = shallow(
 );
 
 console.log(
-    reactWrapper.findBEM({ block: 'block', elem: 'elem' }).length
+    shallowWrapper.findBEM({ block: 'block', elem: 'elem' }).length
 );
 // 1
 ```
