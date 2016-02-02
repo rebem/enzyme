@@ -1,5 +1,6 @@
 import React from 'react';
 import assert from 'assert';
+import { BEM } from 'rebem';
 
 import { mount, shallow } from '../../lib/';
 
@@ -21,21 +22,17 @@ const bemjson = { ...props };
 
 class TestSingle extends React.Component {
     render() {
-        return React.createElement(
-            'div',
-            null,
-            React.createElement('span', props)
+        return React.createElement('div', null,
+            BEM(props)
         );
     }
 }
 
 class TestMultiple extends React.Component {
     render() {
-        return React.createElement(
-            'div',
-            null,
-            React.createElement('span', props),
-            React.createElement('span', props)
+        return React.createElement('div', null,
+            BEM(props),
+            BEM(props)
         );
     }
 }
