@@ -6,5 +6,8 @@ describe('reBEM Enzyme', function() {
         describe('BEM', function() {
             cases(rebem.BEMTests());
         });
+        describe('blockFactory', function() {
+            cases(rebem.blockFactoryTests());
+        });
     });
 });

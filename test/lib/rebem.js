@@ -1,5 +1,5 @@
 import React from 'react';
-import { BEM } from 'rebem';
+import { BEM, blockFactory } from 'rebem';
 
 export function BEMTests() {
     const props = {
@@ -31,6 +31,47 @@ export function BEMTests() {
             return React.createElement('div', null,
                 BEM(props),
                 BEM(props)
+            );
+        }
+    }
+
+    return {
+        bemjson,
+        TestSingle,
+        TestMultiple
+    };
+}
+
+export function blockFactoryTests() {
+    const block = blockFactory('block');
+    const props = {
+        elem: 'elem',
+        mods: {
+            mod: 'val'
+        },
+        mix: [
+            {
+                block: 'block2',
+                elem: 'elem2'
+            }
+        ],
+        tag: 'span'
+    };
+    const bemjson = { ...props, block: 'block' };
+
+    class TestSingle extends React.Component {
+        render() {
+            return React.createElement('div', null,
+                block(props)
+            );
+        }
+    }
+
+    class TestMultiple extends React.Component {
+        render() {
+            return React.createElement('div', null,
+                block(props),
+                block(props)
             );
         }
     }
