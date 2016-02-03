@@ -1,11 +1,6 @@
 {
   "extends": [
     "rebem/configs/common",
-    "rebem/configs/babel",
-    "rebem/configs/react"
-  ],
-  "rules": {
-    "react/jsx-pascal-case": 0,
-    "react/no-multi-comp": 0
-  }
+    "rebem/configs/babel"
+  ]
 }

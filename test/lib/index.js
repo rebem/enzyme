@@ -1,20 +1,13 @@
-import cases from './cases';
-import * as rebem from './rebem';
-import * as rebemJSX from './rebem-jsx';
+import tests from './tests';
+import * as cases from './cases';
 
 describe('reBEM Enzyme', function() {
     describe('rebem', function() {
         describe('BEM', function() {
-            cases(rebem.BEMTests());
+            tests(cases.BEM());
         });
         describe('blockFactory', function() {
-            cases(rebem.blockFactoryTests());
-        });
-    });
-
-    describe.skip('rebem/jsx', function() {
-        describe('BEM', function() {
-            cases(rebemJSX.BEMTests());
+            tests(cases.blockFactory());
         });
     });
 });
