@@ -95,5 +95,34 @@ export default {
             TestSingle,
             TestMultiple
         };
+    },
+
+    className() {
+        const props = {
+            className: 'block__elem block__elem_mod_val block2__elem2'
+        };
+
+        class TestSingle extends React.Component {
+            render() {
+                return React.createElement('div', null,
+                    React.createElement(bemjson.tag, null, props)
+                );
+            }
+        }
+
+        class TestMultiple extends React.Component {
+            render() {
+                return React.createElement('div', null,
+                    React.createElement(bemjson.tag, null, props),
+                    React.createElement(bemjson.tag, null, props)
+                );
+            }
+        }
+
+        return {
+            bemjson,
+            TestSingle,
+            TestMultiple
+        };
     }
 };

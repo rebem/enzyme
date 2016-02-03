@@ -10,4 +10,8 @@ describe('reBEM Enzyme', function() {
             tests(cases.blockFactory());
         });
     });
+
+    describe.skip('className', function() {
+        tests(cases.className());
+    });
 });
