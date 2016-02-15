@@ -1,4 +1,5 @@
 import React from 'react';
+import { BEM } from 'rebem';
 import assert from 'assert';
 
 import { mount, shallow } from '../../lib/';
@@ -14,17 +15,16 @@ const bemjson = {
             block: 'block2',
             elem: 'elem2'
         }
-    ],
-    tag: 'span'
+    ]
 };
 const props = {
-    className: 'block__elem block__elem_mod_val block2__elem2'
+    ...bemjson
 };
 
 class TestSingle extends React.Component {
     render() {
         return React.createElement('div', null,
-            React.createElement(bemjson.tag, props)
+            BEM(props)
         );
     }
 }
@@ -32,14 +32,14 @@ class TestSingle extends React.Component {
 class TestMultiple extends React.Component {
     render() {
         return React.createElement('div', null,
-            React.createElement(bemjson.tag, props),
-            React.createElement(bemjson.tag, props)
+            BEM(props),
+            BEM(props)
         );
     }
 }
 
 describe('reBEM Enzyme', function() {
-    describe.skip('mount', function() {
+    describe('mount', function() {
         describe('findBEM', function() {
             it('is function', function() {
                 const wrapper = mount(
@@ -87,7 +87,7 @@ describe('reBEM Enzyme', function() {
         });
     });
 
-    describe.skip('shallow', function() {
+    describe('shallow', function() {
         describe('findBEM', function() {
             it('is function', function() {
                 const wrapper = shallow(
