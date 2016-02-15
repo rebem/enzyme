@@ -13,6 +13,8 @@
   "files": [ "build/" ],
   "dependencies": {
     "react": "0.14.x",
+    "react-dom": "0.14.x",
+    "react-addons-test-utils": "0.14.x",
     "rebem": "0.4.x",
     "enzyme": "2.0.x"
   },
