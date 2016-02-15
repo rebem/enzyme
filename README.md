@@ -19,7 +19,6 @@ In addition to usual Enzyme methods there are few new which lets you search for 
 * `elem`
 * `mods`
 * `mix`
-* `tag`
 
 ### `findBEM(bem)`
 
