@@ -21,17 +21,17 @@ const props = {
     ...bemjson
 };
 
-export class TestSingle extends React.Component {
+class TestSingle extends React.Component {
     render() {
-        return React.createElement('div', null,
+        return BEM({ block: 'root' },
             BEM(props)
         );
     }
 }
 
-export class TestMultiple extends React.Component {
+class TestMultiple extends React.Component {
     render() {
-        return React.createElement('div', null,
+        return BEM({ block: 'root' },
             BEM(props),
             BEM({ block: 'beep' }),
             BEM(props)

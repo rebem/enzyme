@@ -25,7 +25,7 @@ const props = {
 
 class TestSingle extends React.Component {
     render() {
-        return React.createElement('div', null,
+        return BEM({ block: 'root' },
             BEM(props)
         );
     }

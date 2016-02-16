@@ -23,7 +23,7 @@ const props = {
 
 class TestSingle extends React.Component {
     render() {
-        return React.createElement('div', null,
+        return BEM({ block: 'root' },
             BEM(props)
         );
     }
@@ -31,7 +31,7 @@ class TestSingle extends React.Component {
 
 class TestMultiple extends React.Component {
     render() {
-        return React.createElement('div', null,
+        return BEM({ block: 'root' },
             BEM(props),
             BEM({ block: 'beep' }),
             BEM(props)
@@ -82,7 +82,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('multiple', function() {
+        it('error', function() {
             const wrapper = mount(
                 React.createElement(TestMultiple)
             );
@@ -94,9 +94,7 @@ describe('isBEM', function() {
                     children.isBEM(bemjson);
                 },
                 function(error) {
-                    if (error.message.indexOf(errorMessage) === 0) {
-                        return true;
-                    }
+                    return error.message.indexOf(errorMessage) === 0;
                 }
             );
         });
@@ -144,7 +142,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('multiple', function() {
+        it('error', function() {
             const wrapper = shallow(
                 React.createElement(TestMultiple)
             );
