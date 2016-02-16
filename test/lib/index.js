@@ -80,7 +80,7 @@ describe('reBEM Enzyme', function() {
                 );
 
                 assert.strictEqual(
-                    wrapper.findBEM({ block: 'beep' }).length,
+                    wrapper.findBEM({ block: 'block' }).length,
                     0
                 );
             });
@@ -128,7 +128,7 @@ describe('reBEM Enzyme', function() {
                 );
 
                 assert.strictEqual(
-                    wrapper.findBEM({ block: 'beep' }).length,
+                    wrapper.findBEM({ block: 'block' }).length,
                     0
                 );
             });
