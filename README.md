@@ -60,3 +60,22 @@ console.log(
 );
 // 1
 ```
+
+### `isBEM(bem)`
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
+    BEM({ block: 'block' },
+        BEM({ block: 'block', elem: 'elem' })
+    )
+);
+const children = wrapper.children();
+
+console.log(
+    children.isBEM({ block: 'block', elem: 'elem' })
+);
+// true
+```
