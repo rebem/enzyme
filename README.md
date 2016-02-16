@@ -13,12 +13,14 @@ npm i -D rebem-enzyme
 
 ## Overview
 
-In addition to usual Enzyme methods there are few new which lets you search for components by [BEM PropTypes](https://github.com/rebem/rebem#bem-proptypes):
+In addition to usual Enzyme methods there are few new which lets you search for components by [BEM PropTypes](https://github.com/rebem/rebem#bem-proptypes) instead of [`selector`](http://airbnb.io/enzyme/GLOSSARY.html#selector):
 
 * `block`
 * `elem`
 * `mods`
 * `mix`
+
+## API
 
 :point_right: Examples below illustrates how it work with `shallow` wrapper just to be short – `mount` wrapper has absolutely the same methods.
 
