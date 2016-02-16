@@ -134,3 +134,25 @@ console.log(
 );
 // 1
 ```
+
+### `someBEM(bemjson)`
+
+In addition to [`some()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/some.html).
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
+    BEM({ block: 'block' },
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
+    )
+);
+const children = wrapper.children();
+
+console.log(
+    children.someBEM({ block: 'block', elem: 'elem' })
+);
+// true
+```
