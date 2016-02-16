@@ -20,33 +20,43 @@ In addition to usual Enzyme methods there are few new which lets you search for 
 * `mods`
 * `mix`
 
+:point_right: Examples below illustrates how it work with `shallow` wrapper just to be short – `mount` wrapper has absolutely the same methods.
+
 ### `findBEM(bem)`
 
 ```js
 import { BEM } from 'rebem';
-import { mount, shallow } from 'rebem-enzyme';
+import { shallow } from 'rebem-enzyme';
 
-// Full DOM Rendering
-const reactWrapper = mount(
+const wrapper = shallow(
     BEM({ block: 'block' },
-        BEM({ block: 'block', elem: 'elem' })
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
     )
 );
 
 console.log(
-    reactWrapper.findBEM({ block: 'block', elem: 'elem' }).length
+    wrapper.findBEM({ block: 'block', elem: 'elem' }).length
 );
 // 1
+```
 
-// Shallow Rendering
-const shallowWrapper = shallow(
+### `filterBEM(bem)`
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
     BEM({ block: 'block' },
-        BEM({ block: 'block', elem: 'elem' })
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
     )
 );
+const children = wrapper.children();
 
 console.log(
-    shallowWrapper.findBEM({ block: 'block', elem: 'elem' }).length
+    children.filterBEM({ block: 'block', elem: 'elem' }).length
 );
 // 1
 ```
