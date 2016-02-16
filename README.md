@@ -88,14 +88,11 @@ import { BEM } from 'rebem';
 import { shallow } from 'rebem-enzyme';
 
 const wrapper = shallow(
-    BEM({ block: 'block' },
-        BEM({ block: 'block', elem: 'elem' })
-    )
+    BEM({ block: 'block', elem: 'elem' })
 );
-const children = wrapper.children();
 
 console.log(
-    children.isBEM({ block: 'block', elem: 'elem' })
+    wrapper.isBEM({ block: 'block', elem: 'elem' })
 );
 // true
 ```
