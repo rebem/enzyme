@@ -15,16 +15,22 @@ npm i -D rebem-enzyme
 
 In addition to usual Enzyme methods there are few new which lets you search for components by [BEM PropTypes](https://github.com/rebem/rebem#bem-proptypes) instead of [`selector`](http://airbnb.io/enzyme/GLOSSARY.html#selector):
 
-* `block`
-* `elem`
-* `mods`
-* `mix`
+```js
+{
+    block
+    elem
+    mods
+    mix
+}
+```
+
+This object may be called `bemjson`.
 
 ## API
 
 :point_right: Examples below illustrates how it work with `shallow` wrapper just to be short – `mount` wrapper has absolutely the same methods.
 
-### `findBEM(bem)`
+### `findBEM(bemjson)`
 
 Addition to [`find()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html).
 
@@ -45,7 +51,7 @@ console.log(
 // 1
 ```
 
-### `filterBEM(bem)`
+### `filterBEM(bemjson)`
 
 Addition to [`filter()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/filter.html).
 
@@ -67,7 +73,7 @@ console.log(
 // 1
 ```
 
-### `notBEM(bem)`
+### `notBEM(bemjson)`
 
 Addition to [`not()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/not.html).
 
@@ -89,7 +95,7 @@ console.log(
 // 1
 ```
 
-### `isBEM(bem)`
+### `isBEM(bemjson)`
 
 Addition to [`is()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/is.html).
 
