@@ -156,3 +156,25 @@ console.log(
 );
 // true
 ```
+
+### `everyBEM(bemjson)`
+
+In addition to [`every()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/every.html).
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
+    BEM({ block: 'block' },
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
+    )
+);
+const children = wrapper.children();
+
+console.log(
+    children.everyBEM({ block: 'block', elem: 'elem' })
+);
+// false
+```
