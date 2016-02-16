@@ -32,7 +32,7 @@ This object may be called `bemjson`.
 
 ### `findBEM(bemjson)`
 
-Addition to [`find()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html).
+In addition to [`find()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html).
 
 ```js
 import { BEM } from 'rebem';
@@ -53,7 +53,7 @@ console.log(
 
 ### `filterBEM(bemjson)`
 
-Addition to [`filter()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/filter.html).
+In addition to [`filter()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/filter.html).
 
 ```js
 import { BEM } from 'rebem';
@@ -75,7 +75,7 @@ console.log(
 
 ### `notBEM(bemjson)`
 
-Addition to [`not()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/not.html).
+In addition to [`not()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/not.html).
 
 ```js
 import { BEM } from 'rebem';
@@ -97,7 +97,7 @@ console.log(
 
 ### `isBEM(bemjson)`
 
-Addition to [`is()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/is.html).
+In addition to [`is()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/is.html).
 
 ```js
 import { BEM } from 'rebem';
@@ -115,7 +115,7 @@ console.log(
 
 ### `findBEM(bemjson)`
 
-Addition to [`closest()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/closest.html).
+In addition to [`closest()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/closest.html).
 
 ```js
 import { BEM } from 'rebem';
