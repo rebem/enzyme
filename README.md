@@ -112,3 +112,25 @@ console.log(
 );
 // true
 ```
+
+### `findBEM(bemjson)`
+
+Addition to [`closest()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/closest.html).
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
+    BEM({ block: 'block', mods: { mod: true } },
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
+    )
+);
+const firstChild = wrapper.children().first();
+
+console.log(
+    firstChild.closestBEM({ block: 'block', mods: { mod: true } }).length
+);
+// 1
+```
