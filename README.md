@@ -61,6 +61,26 @@ console.log(
 // 1
 ```
 
+### `notBEM(bem)`
+
+```js
+import { BEM } from 'rebem';
+import { shallow } from 'rebem-enzyme';
+
+const wrapper = shallow(
+    BEM({ block: 'block' },
+        BEM({ block: 'block', elem: 'elem' }),
+        BEM({ block: 'block2' })
+    )
+);
+const children = wrapper.children();
+
+console.log(
+    children.notBEM({ block: 'block', elem: 'elem' }).length
+);
+// 1
+```
+
 ### `isBEM(bem)`
 
 ```js
