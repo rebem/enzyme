@@ -24,6 +24,8 @@ In addition to usual Enzyme methods there are few new which lets you search for 
 
 ### `findBEM(bem)`
 
+Addition to [`find()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html).
+
 ```js
 import { BEM } from 'rebem';
 import { shallow } from 'rebem-enzyme';
@@ -42,6 +44,8 @@ console.log(
 ```
 
 ### `filterBEM(bem)`
+
+Addition to [`filter()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/filter.html).
 
 ```js
 import { BEM } from 'rebem';
@@ -63,6 +67,8 @@ console.log(
 
 ### `notBEM(bem)`
 
+Addition to [`not()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/not.html).
+
 ```js
 import { BEM } from 'rebem';
 import { shallow } from 'rebem-enzyme';
@@ -82,6 +88,8 @@ console.log(
 ```
 
 ### `isBEM(bem)`
+
+Addition to [`is()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/is.html).
 
 ```js
 import { BEM } from 'rebem';
