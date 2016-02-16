@@ -58,7 +58,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('simple', function() {
+        it('true', function() {
             const wrapper = mount(
                 React.createElement(TestSingle)
             );
@@ -70,7 +70,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('not found', function() {
+        it('false', function() {
             const wrapper = mount(
                 React.createElement(TestSingle)
             );
@@ -118,7 +118,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('simple', function() {
+        it('true', function() {
             const wrapper = shallow(
                 React.createElement(TestSingle)
             );
@@ -130,7 +130,7 @@ describe('isBEM', function() {
             );
         });
 
-        it('not found', function() {
+        it('false', function() {
             const wrapper = shallow(
                 React.createElement(TestSingle)
             );
