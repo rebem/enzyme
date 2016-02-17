@@ -113,7 +113,7 @@ console.log(
 // true
 ```
 
-### `findBEM(bemjson)`
+### `closestBEM(bemjson)`
 
 In addition to [`closest()`](http://airbnb.io/enzyme/docs/api/ShallowWrapper/closest.html).
 
