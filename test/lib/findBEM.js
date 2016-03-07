@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement as $ } from 'react';
 import { BEM } from 'rebem';
 import assert from 'assert';
 
@@ -25,6 +25,18 @@ class TestSingle extends React.Component {
     render() {
         return BEM({ block: 'root' },
             BEM(props)
+        );
+    }
+}
+
+class TestSingleProps extends React.Component {
+    render() {
+        return $('div', { block: 'root' },
+            $('div', {
+                ...props,
+                // messing everything up with className
+                className: 'block__elem block__elem_mod_val block2__elem2'
+            })
         );
     }
 }
@@ -58,15 +70,28 @@ describe('findBEM', function() {
             );
         });
 
-        it('simple', function() {
-            const wrapper = mount(
-                React.createElement(TestSingle)
-            );
+        describe('simple', function() {
+            it('className', function() {
+                const wrapper = mount(
+                    React.createElement(TestSingle)
+                );
 
-            assert.strictEqual(
-                wrapper.findBEM(bemjson).length,
-                1
-            );
+                assert.strictEqual(
+                    wrapper.findBEM(bemjson).length,
+                    1
+                );
+            });
+
+            it('props', function() {
+                const wrapper = mount(
+                    React.createElement(TestSingleProps)
+                );
+
+                assert.strictEqual(
+                    wrapper.findBEM(bemjson).length,
+                    1
+                );
+            });
         });
 
         it('multiple', function() {
