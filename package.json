@@ -16,6 +16,7 @@
     "react-dom": "0.14.x",
     "react-addons-test-utils": "0.14.x",
     "rebem-classname": "0.1.x",
+    "core-js": "2.1.x",
     "enzyme": "2.0.x"
   },
   "devDependencies": {
