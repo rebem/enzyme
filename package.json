@@ -1,6 +1,6 @@
 {
   "name": "rebem-enzyme",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "reBEM addons for Enzyme",
   "keywords": [ "rebem", "react", "enzyme", "tests" ],
   "homepage": "https://github.com/rebem/enzyme",
